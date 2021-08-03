@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w8J-s4-vkp">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="5sz-ea-xGB">
+            <objects>
+                <viewController id="w8J-s4-vkp" customClass="MainViewController" customModule="Stamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JO0-VZ-WAY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rq6-Qp-drz">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sx-sa-Agh">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="stampTapped:" destination="w8J-s4-vkp" eventType="touchUpInside" id="8Ra-GB-wGA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpc-IR-GND">
+                                        <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stampTapped:" destination="w8J-s4-vkp" eventType="touchUpInside" id="vwI-GP-FJc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-6u-URK">
+                                        <rect key="frame" x="206.99999999999997" y="0.0" width="103.66666666666666" height="100"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stampTapped:" destination="w8J-s4-vkp" eventType="touchUpInside" id="myw-eK-Tf4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7X-Yc-Oiz">
+                                        <rect key="frame" x="310.66666666666669" y="0.0" width="103.33333333333331" height="100"/>
+                                        <color key="backgroundColor" red="0.36470588235294116" green="0.60784313725490191" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stampTapped:" destination="w8J-s4-vkp" eventType="touchUpInside" id="jwE-aU-iDq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bpc-IR-GND" firstAttribute="width" secondItem="aAh-6u-URK" secondAttribute="width" id="BNn-sR-BKC"/>
+                                    <constraint firstAttribute="height" constant="100" id="XEC-eF-Vc7"/>
+                                    <constraint firstItem="aAh-6u-URK" firstAttribute="width" secondItem="L7X-Yc-Oiz" secondAttribute="width" id="ca4-37-q6G"/>
+                                    <constraint firstItem="0Sx-sa-Agh" firstAttribute="width" secondItem="Bpc-IR-GND" secondAttribute="width" id="gmM-Lj-mSU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rq6-Qp-drz" firstAttribute="leading" secondItem="bDi-F0-q2j" secondAttribute="leading" id="3UC-PR-ZDX"/>
+                            <constraint firstItem="bDi-F0-q2j" firstAttribute="trailing" secondItem="Rq6-Qp-drz" secondAttribute="trailing" id="N0V-DA-XUE"/>
+                            <constraint firstAttribute="bottom" secondItem="Rq6-Qp-drz" secondAttribute="bottom" id="tCk-cZ-caD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bDi-F0-q2j"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="stampButtons" destination="0Sx-sa-Agh" collectionClass="NSMutableArray" id="Lzl-Tw-UX6"/>
+                        <outletCollection property="stampButtons" destination="Bpc-IR-GND" collectionClass="NSMutableArray" id="53e-Tx-eHb"/>
+                        <outletCollection property="stampButtons" destination="aAh-6u-URK" collectionClass="NSMutableArray" id="TGL-Yk-b1S"/>
+                        <outletCollection property="stampButtons" destination="L7X-Yc-Oiz" collectionClass="NSMutableArray" id="ZVI-jI-uNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNn-HM-T3P" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="134"/>
+        </scene>
+    </scenes>
+</document>
